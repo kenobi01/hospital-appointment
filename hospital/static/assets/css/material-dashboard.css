@@ -1594,7 +1594,7 @@ button.bg-dark:focus {
 .btn-group-lg .btn {
   padding: 1.125rem 2.25rem;
   font-size: 0.875rem;
-  line-height: 1.333333;
+  line-height: 1.03244F;
   border-radius: 0.2rem;
 }
 .btn.btn-round {
@@ -1794,7 +1794,7 @@ h2, .h2 {
 }
 
 .nav-tabs .nav-link.active {
-  color: #333333;
+  color: #03244F;
   border-color: #28acea;
 }
 

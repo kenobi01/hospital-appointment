@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import include, path
 from hospital import views
 from django.contrib.auth import views as auth_views
-from django.urls import include, path
+from django.conf.urls import include, url
 
 urlpatterns = [
     path('',views.home_view,name=''),
@@ -44,7 +44,7 @@ urlpatterns = [
     path('approve_doc/<int:pk>', views.approve_doctor_view,name='approve_doctor'),
     path('approve_pat/<int:pk>', views.approve_patient_view,name='approve_patient'),
     path('approve_adm/<int:pk>', views.approve_admin_view,name='approve_admin'),
-    #path('bookapp_adm/',views.bookapp_adm_view,name='bookapp_adm.html'),
+    path('bookapp_adm/',views.bookapp_adm_view,name='bookapp_adm.html'),
     path('admit_adm/',views.admit_adm_view,name='admit_adm.html'),
     path('calladoc_adm/',views.calladoc_adm_view,name='calladoc_adm.html'),
     path('medicalreport_adm/',views.medicalreport_adm_view,name='medicalreport_adm.html'),
@@ -54,7 +54,7 @@ urlpatterns = [
     path('login_adm/',views.login_adm_view,name='login_adm.html'),
     path('yourhealth_adm/',views.yourhealth_adm_view,name='yourhealth_adm.html'),
     path('admin_appointment_view',views.admin_appointment_view,name='appoint_view_adm.html'),
-    #path('appointment_particular_adm/<int:pk>',views.appointment_particular_adm_view,name='appoint_particular_adm.html'),
+    path('appointment_particular_adm/<int:pk>',views.appointment_particular_adm_view,name='appoint_particular_adm.html'),
     path('admin_admit_view',views.admin_admit_view,name='admit_view_adm.html'),
     path('admin_admit_view/<int:pk>',views.admit_particular_adm_view,name='admit_particular_adm.html'),
     path('pat_appointment_view',views.pat_appointment_view,name='appoint_view_pat.html'),
